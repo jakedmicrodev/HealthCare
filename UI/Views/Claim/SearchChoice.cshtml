@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "SearchChoice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .column {
+        float: left;
+        width: 250px;
+        color: #fff;
+        padding: 10px;
+        margin: 10px;
+        background: #3db5da;
+        border-radius: 10px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    h3 {
+        color: #5caac1;
+    }
+</style>
+
+
+<div id="boxes">
+    <h3>How would you like to search?</h3>
+    <div class="row">
+        <a href=@Url.Action("SearchByClaim", "Claim")>
+            <div class="column">
+                <h2>Claim Details</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("SearchByLineItem", "Claim")>
+            <div class="column">
+                <h2>Line Item Details</h2>
+            </div>
+        </a>
+    </div>
+</div>

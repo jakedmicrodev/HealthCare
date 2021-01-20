@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{22ed86ee-b2ea-43a4-bd76-d12e9a10ebfc}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Functions" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\User Defined Types" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\tePrescriptions.sql" />
+    <Build Include="dbo\Tables\teLineItems.sql" />
+    <Build Include="dbo\Tables\teInvoices.sql" />
+    <Build Include="dbo\Tables\teClaims.sql" />
+    <Build Include="dbo\Tables\teAccounts.sql" />
+    <Build Include="dbo\Tables\tdTitles.sql" />
+    <Build Include="dbo\Tables\tdServices.sql" />
+    <Build Include="dbo\Tables\tdProviders.sql" />
+    <Build Include="dbo\Tables\tdPayees.sql" />
+    <Build Include="dbo\Tables\tdPatients.sql" />
+    <Build Include="dbo\Tables\tdMedications.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateTitle.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateService.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateProvider.sql" />
+    <Build Include="dbo\Stored Procedures\UpdatePrescription.sql" />
+    <Build Include="dbo\Stored Procedures\UpdatePayee.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateMedication.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateLineItem.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateInvoice.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateClaim.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateAccount.sql" />
+    <Build Include="dbo\Stored Procedures\GetTitles.sql" />
+    <Build Include="dbo\Stored Procedures\GetServices.sql" />
+    <Build Include="dbo\Stored Procedures\GetProviders.sql" />
+    <Build Include="dbo\Stored Procedures\GetPrescriptions.sql" />
+    <Build Include="dbo\Stored Procedures\GetPayees.sql" />
+    <Build Include="dbo\Stored Procedures\GetPatients.sql" />
+    <Build Include="dbo\Stored Procedures\GetMedications.sql" />
+    <Build Include="dbo\Stored Procedures\GetLineItems.sql" />
+    <Build Include="dbo\Stored Procedures\GetInvoices.sql" />
+    <Build Include="dbo\Stored Procedures\GetClaims.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccounts.sql" />
+    <Build Include="dbo\Stored Procedures\CreateTitle.sql" />
+    <Build Include="dbo\Stored Procedures\CreateService.sql" />
+    <Build Include="dbo\Stored Procedures\CreateProvider.sql" />
+    <Build Include="dbo\Stored Procedures\CreatePrescription.sql" />
+    <Build Include="dbo\Stored Procedures\CreatePayee.sql" />
+    <Build Include="dbo\Stored Procedures\CreateMedication.sql" />
+    <Build Include="dbo\Stored Procedures\CreateLineItem.sql" />
+    <Build Include="dbo\Stored Procedures\CreateInvoice.sql" />
+    <Build Include="dbo\Stored Procedures\CreateClaim.sql" />
+    <Build Include="dbo\Stored Procedures\CreateAccount.sql" />
+    <Build Include="dbo\Tables\TempClaims.sql" />
+    <Build Include="dbo\Tables\teInvoices2.sql" />
+    <Build Include="dbo\Tables\teInvoicePayments.sql" />
+    <Build Include="dbo\Tables\teClaimsArchive.sql" />
+    <Build Include="dbo\Tables\tdStates.sql" />
+    <Build Include="dbo\Tables\tdExpenseTypes.sql" />
+    <Build Include="dbo\Tables\tdCities.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateState.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateCity.sql" />
+    <Build Include="dbo\Stored Procedures\GetStates.sql" />
+    <Build Include="dbo\Stored Procedures\GetClaimsByServiceDate.sql" />
+    <Build Include="dbo\Stored Procedures\GetClaimsByService.sql" />
+    <Build Include="dbo\Stored Procedures\GetClaimsByAmount.sql" />
+    <Build Include="dbo\Stored Procedures\GetClaimById.sql" />
+    <Build Include="dbo\Stored Procedures\GetCities.sql" />
+    <Build Include="dbo\Stored Procedures\CreateState.sql" />
+    <Build Include="dbo\Stored Procedures\CreateCity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SqlSchemaCompare1.scmp" />
+  </ItemGroup>
+</Project>

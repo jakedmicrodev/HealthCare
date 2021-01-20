@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .column {
+        float: left;
+        width: 250px;
+        color: #fff;
+        padding: 10px;
+        margin: 10px;
+        background: #3db5da;
+        border-radius: 10px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    h3 {
+        color: #5caac1;
+    }
+</style>
+
+
+<div id="boxes">
+    <h3>What would you like to view?</h3>
+    <div class="row">
+        <a href=@Url.Action("Index", "Account")>
+            <div class="column">
+                <h2>Accounts</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "City")>
+            <div class="column">
+                <h2>Cities</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("SearchChoice", "Claim")>
+            <div class="column">
+                <h2>Claims</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("SearchChoice", "Invoice")>
+            <div class="column">
+                <h2>Invoices</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Medication")>
+            <div class="column">
+                <h2>Medications</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Patient")>
+            <div class="column">
+                <h2>Patients</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Payee")>
+            <div class="column">
+                <h2>Payees</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Prescription")>
+            <div class="column">
+                <h2>Prescriptions</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Provider")>
+            <div class="column">
+                <h2>Providers</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Service")>
+            <div class="column">
+                <h2>Services</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "State")>
+            <div class="column">
+                <h2>States</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Title")>
+            <div class="column">
+                <h2>Titles</h2>
+            </div>
+        </a>
+    </div>
+</div>
+

@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .column {
+        float: left;
+        width: 250px;
+        color: #fff;
+        padding: 10px;
+        margin: 10px;
+        background: #3db5da;
+        border-radius: 10px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    h3 {
+        color: #5caac1;
+    }
+</style>
+
+
+<div id="boxes">
+    <h3>What would you like to create?</h3>
+    <div class="row">
+        <a href=@Url.Action("Create", "Account")>
+            <div class="column">
+                <h2>Account</h2>
+                Add a new account for a payee
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "City")>
+            <div class="column">
+                <h2>City</h2>
+                Add a  new city
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Claim")>
+            <div class="column">
+                <h2>Claim</h2>
+                Add a claim from the EOB
+            </div>
+        </a>
+
+        @*<a href=@Url.Action("Create", "Invoice")>
+            <div class="column">
+                <h2>Invoice</h2>
+                Add an invoice for a claim
+            </div>
+        </a>*@
+
+        <a href=@Url.Action("Create", "Medication")>
+            <div class="column">
+                <h2>Medication</h2>
+                Add a new medication
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Patient")>
+            <div class="column">
+                <h2>Patient</h2>
+                Add a new patient
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Payee")>
+            <div class="column">
+                <h2>Payee</h2>
+                Add a new payee for an invoice
+            </div>
+        </a>
+
+        @*<a href=@Url.Action("Create", "Prescription")>
+            <div class="column">
+                <h2>Prescription</h2>
+                Add a new prescription
+            </div>
+        </a>*@
+
+        <a href=@Url.Action("Create", "Provider")>
+            <div class="column">
+                <h2>Provider</h2>
+                Add a new provider for a service
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Service")>
+            <div class="column">
+                <h2>Service</h2>
+                Add a new service
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "State")>
+            <div class="column">
+                <h2>State</h2>
+                Add a new state
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Title")>
+            <div class="column">
+                <h2>Title</h2>
+                Add a new title
+            </div>
+        </a>
+    </div>
+</div>
